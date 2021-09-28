@@ -20,4 +20,5 @@ res.render('show.ejs', { data: Pokemon[req.params.id] });
 // ========= LISTENER ==========
 app.listen(port, () => {
     console.log(`listening on port: ${port}`)
+
 })
