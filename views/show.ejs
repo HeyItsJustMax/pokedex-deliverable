@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- include head  -->
+    <%- include("./partials/head.ejs")%>
+
+    <body>
+        <!-- include header  -->
+        <%- include("./partials/header.ejs")%>
+        <div class="container">
+            <div class="poke" id="cont1">
+               <h3><%= data.name %> </h3> 
+               <img src="<%=data.img%>" alt="">
+                ID: <%= data.id %> 
+                Type(s): <%= data.type %> 
+            </div>
+
+            <div class="stats" id="cont2">
+                <h3>Stats</h3>
+                HP: <%= data.stats.hp %> <br>
+                ATK: <%= data.stats.attack %> <br>
+                DEF: <%= data.stats.defense %> <br>
+                SpATK: <%= data.stats.spattack %> <br>
+                SpDEF: <%= data.stats.spdefense %> <br>
+                SPEED: <%= data.stats.speed %> <br>
+            </div>
+
+            <div class="effect" id="cont3">
+                <h3>Weakness Chart</h3>
+                Normal: <%= data.damages.normal %> <br>
+                Fire: <%= data.damages.fire %> <br>
+                Water: <%= data.damages.water %> <br>
+                Electric: <%= data.damages.electric %> <br>
+                Grass: <%= data.damages.grass %> <br>
+                Ice: <%= data.damages.ice %> <br>
+                Fighting: <%= data.damages.fight %> <br>
+                Poison: <%= data.damages.poison %> <br>
+                Ground: <%= data.damages.ground %> <br>
+                Flying: <%= data.damages.flying %> <br>
+                Psychic: <%= data.damages.psychic %> <br>
+                Bug: <%= data.damages.bug %> <br>
+                Rock: <%= data.damages.rock %> <br>
+                Ghost: <%= data.damages.ghost %> <br>
+                Dragon: <%= data.damages.dragon %> <br>
+                Dark: <%= data.damages.dark %> <br>
+                Steel: <%= data.damages.steel %> <br>
+            </div>
+<br>
+            <a href="/pokemon">Back to Main Page</a><br>
+        
+        </div>
+        <!-- include footer  -->
+        <%- include("./partials/footer.ejs")%>
+
+    </body>
+</html>

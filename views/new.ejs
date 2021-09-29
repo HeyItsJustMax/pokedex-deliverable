@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- include head  -->
+    <%- include("./partials/head.ejs")%>
+
+    <body>
+        <!-- include header  -->
+        <%- include("./partials/header.ejs")%>
+        <main>
+            <div>
+                <form action="/pokemon" method="post"></form>
+                    <fieldset>
+                        <legend>Create New Pokedex Entry</legend>
+                        <label>
+                            Pokemon:<input
+                              type="text"
+                              name="name"
+                              placeholder="Enter Pokemon Name"
+                              />
+                        </label>
+                        <label>
+                            Type(s):<input
+                            type="text"
+                            placeholder="Enter Pokemon Type(s)"
+                            />
+                        </label>
+                    </fieldset>
+                    <input type="submit" value="Create New Pokedex Entry">
+            </div>
+        </main>
+       
+
+        <!-- include footer  -->
+        <%- include("./partials/footer.ejs")%>
+
+    </body>
+</html>
