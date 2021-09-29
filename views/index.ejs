@@ -2,30 +2,34 @@
 <html lang="en">
     <!-- include head  -->
     <%- include("./partials/head.ejs")%>
-
     <body>
         <!-- include header  -->
-        <%- include("./partials/header.ejs")%>
-
-            
-        <table>
-            <% for(let i = 0; i < data.length; i++){ %>
-
-                <tr>
-                    <th><%= data[i].name %></th>  
-                </tr>
-                <tr>
-                <a href="/pokemon/<%= i %>">
-                    <!-- <%= data[i].name %> -->
-                    <!-- <%= data[i].img %> -->
-                    <img src="<%=data[i].img%>" alt="">
-                </a>
-                </tr>
-            <% } %>
-            </table>
-
-        <!-- include footer  -->
-        <%- include("./partials/footer.ejs")%>
-
+        <%- include("./partials/header.ejs")%>        
+        <main>
+            <div>
+                <a href="/pokemon/new"><button>Create A New Entry</button></a>
+            </div>
+            <table>
+                <% for(let i = 0; i < data.length; i++){ %>
+                    <thead>
+                        <tr>
+                            <th><%= data[i].name %></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <a href="/pokemon/<%= i %>">
+                                    <img src="<%=data[i].img%>" alt="">
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <% } %>
+                </table>
+                <!-- include footer  -->
+                <%- include("./partials/footer.ejs")%>
+                
+        </main>
     </body>
 </html>

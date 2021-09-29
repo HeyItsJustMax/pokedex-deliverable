@@ -8,15 +8,15 @@
         <%- include("./partials/header.ejs")%>
         <main>
             <div>
-                <form action="/pokemon" method="post"></form>
+                <form action="/pokemon" method="post">
                     <fieldset>
                         <legend>Create New Pokedex Entry</legend>
                         <label>
                             Pokemon:<input
-                              type="text"
-                              name="name"
-                              placeholder="Enter Pokemon Name"
-                              />
+                            type="text"
+                            name="name"
+                            placeholder="Enter Pokemon Name"
+                            />
                         </label>
                         <label>
                             Type(s):<input
@@ -26,6 +26,7 @@
                         </label>
                     </fieldset>
                     <input type="submit" value="Create New Pokedex Entry">
+                </form>
             </div>
         </main>
        
