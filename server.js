@@ -7,7 +7,23 @@ const methodOverride = require('method-override')
 const mongoose = require("mongoose")
 const Pokemon = require('./models/pokemon.js');
 
+// ========== OUR MODELS ==========
+
+// pull schema and model from mongoose
+const {Schema, model} = mongoose
+
+// make fruits scehma
+const pokeSchema = new Schema({
+    name: String,
+    types: String,
+})
+
+// make fruit model
+const Poke = model("Poke", pokeSchema)
+
+
 // ========== MIDDLEWARE ==========
+
 
 
 
@@ -25,7 +41,11 @@ app.get('/pokemon/new', (req, res) => {
 
 // CREATE
 app.post("/pokemon", (req, res) => {
-
+    // create new pokemon
+    Poke.create(req.body, (err, poke) => {
+        // redirect the user back to the main fruits page after pokemon is created
+        res.redirect("/pokemon")
+    })
 })
 
 // EDIT
